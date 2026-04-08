@@ -51,10 +51,10 @@ export default defineType({
           ],
           preview: {
             select: {title: 'platform', url: 'url'},
-            prepare(selection: {title: string; url: string}) {
+            prepare(value) {
               return {
-                title: selection.title,
-                subtitle: selection.url,
+                title: value.title,
+                subtitle: value.url,
               }
             },
           },
