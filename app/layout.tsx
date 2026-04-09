@@ -31,7 +31,7 @@ export default async function RootLayout({
       <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Syne:wght@400..800&display=swap" rel="stylesheet" precedence="default" />
       <body className="min-h-full flex flex-col">
         <Header logoUrl={logoUrl} navLinks={headerData?.navLinks ?? []} contactButton={headerData?.contactButton ?? null} />
-        <main className="flex-grow">{children}</main>
+        <main className="">{children}</main>
         <Footer 
           companyName={footerData?.companyName}
           logo={footerData?.logo}

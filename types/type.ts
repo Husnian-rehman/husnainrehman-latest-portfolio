@@ -35,3 +35,36 @@ export interface SiteFooter {
 
 export type { SiteFooter as FooterProps }
 
+export interface BannerCta {
+  label: string
+  href: string
+}
+
+export interface BannerSocialLink {
+  platform: string
+  href: string
+}
+
+export interface BannerProps {
+  pretitle?: string
+  title?: string
+  description?: string
+  primaryCta?: BannerCta
+  secondaryCta?: BannerCta
+  socialLinks?: BannerSocialLink[]
+  image?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: any
+  }
+  secondaryImage?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: any
+  }
+}
+
