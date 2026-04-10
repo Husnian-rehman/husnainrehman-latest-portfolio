@@ -52,10 +52,10 @@ export default function Banner({
   ]
 
   return (
-    <section className="relative overflow-hidden bg-white pt-[100px] pb-90 mb-20">
+    <section className="relative overflow-hidden bg-white md:pt-[100px] pt-[40px] 2xl:pb-50 lg:pb-70 pb-90 mb-20">
        {(image || secondaryImage) && (
-            <div className="hidden lg:flex items-center justify-center absolute bottom-0 left-0">
-              <div className="relative w-[600px] h-[530px]">
+            <div className="flex items-center justify-center absolute bottom-0 left-0">
+              <div className="relative lg:min-w-[460px] 2xl:min-w-[600px] sm:min-w-[363px] min-w-[300px] w-full 2xl:h-[530px] lg:h-[409px] sm:h-[320px] h-[263px]">
                 {image && (
                   <div className="absolute right-0 w-[80%] top-0 z-9 ">
                     <img
@@ -66,7 +66,7 @@ export default function Banner({
                   </div>
                 )}
                 {secondaryImage && (
-                  <div className="absolute left-0 bottom-0 w-[600px] h-[545px]">
+                  <div className="absolute left-0 bottom-0 lg:min-w-[460px] 2xl:min-w-[600px] sm:min-w-[363px] min-w-[300px] w-full 2xl:h-[545px] lg:h-[420px] sm:h-[330px] h-[266px] z-8">
                     <img
                       src={urlFor(secondaryImage).width(652).height(594).url()}
                       alt="Banner secondary"
@@ -81,25 +81,25 @@ export default function Banner({
       <div className="max-w-[1400px] mx-auto px-4 relative z-10">
           <div className="">
             <p className="text-sm uppercase tracking-[0.2em] mb-4 text-[var(--primary)] font-[600]">{pretitle}</p>
-            <h1 className="text-5xl sm:text-6xl xl:text-[100px] mb-8 font-bold tracking-[0.1em] text-[var(--primary)]">
+            <h1 className="text-5xl sm:text-6xl lg:text-[80px] xl:text-[100px] mb-8 font-bold tracking-[0.1em] text-[var(--primary)]">
               {title}
             </h1>
-            <div className="max-w-[940px] ml-auto">
+            <div className="xl:w-[67%] lg:w-[65%] ml-auto">
               <p className=" text-base font-[600] max-w-[685px] leading-7 text-[#545b63] sm:text-lg mb-8">
                 {description}
               </p>
-              <div className='flex gap-4 items-center '>
-                <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className='flex md:gap-4 gap-8 items-center flex-wrap '>
+                <div className="flex items-start gap-4">
                   <a
                     href={safePrimaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full bg-[var(--primary)] px-8 py-4 tracking-[0.1em] text-[17px] font-semibold text-white shadow-lg shadow-black/10 transition-all ease-in-out duration-500 hover:translate-y-[-1px] hover:opacity-95"
+                    className="inline-flex items-center justify-center rounded-full bg-[var(--primary)] sm:px-8 px-5 py-4 tracking-[0.1em] sm:text-[17px] text-[13px]  font-semibold text-white shadow-lg shadow-black/10 transition-all ease-in-out duration-500 hover:translate-y-[-1px] hover:opacity-95"
                   >
                     {safePrimaryCta.label}
                     <span className="ml-2 text-white">↗</span>
                   </a>
                   <a
                     href={safeSecondaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full border border-[var(--primary)] px-8 py-4 tracking-[0.1em] text-[17px] font-semibold text-[var(--primary)] transition-all ease-in-out duration-500 hover:bg-[var(--primary)] hover:text-white"
+                    className="inline-flex items-center justify-center rounded-full border border-[var(--primary)] sm:px-8 px-5 py-4 tracking-[0.1em] sm:text-[17px] text-[13px] font-semibold text-[var(--primary)] transition-all ease-in-out duration-500 hover:bg-[var(--primary)] hover:text-white"
                   >
                     {safeSecondaryCta.label}
                   </a>
@@ -116,7 +116,7 @@ export default function Banner({
                       href={social.href || (social as any).url}
                       target="_blank"
                       rel="noreferrer"
-                      className="group inline-flex h-[60px] w-[60px] items-center justify-center rounded-full border border-gray-200 bg-gray-200 text-[var(--primary)] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white"
+                      className="group inline-flex sm:h-[60px] sm:w-[60px] h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-200 bg-gray-200 text-[var(--primary)] shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white"
                       aria-label={social.platform}
                     >
                       {socialIcons[social.platform.toLowerCase()] || socialIcons.twitter}
@@ -124,7 +124,25 @@ export default function Banner({
                   ))}
                 </div>
               </div>
+              <div className=" relative hidden lg:flex flex-col items-center mt-5">
+                  <h2 className="2xl:text-[98px] xl:text-[80px] lg:text-[70px] text-[50px] font-bold tracking-tighter text-transparent"
+                      style={{ WebkitTextStroke: '1px #333' }}>
+                    UI UX DESIGNER
+                  </h2>
+
+                  <h2 className="2xl:text-[98px] xl:text-[80px]  lg:text-[70px] text-[50px] font-bold tracking-tighter text-transparent select-none"
+                      style={{ 
+                        WebkitTextStroke: '1px #ccc',
+                        transform: 'scaleY(-1)',
+                         maskImage: 'linear-gradient(transparent, rgba(18, 15, 37, 0.5))',
+                           marginTop: '-40px',
+                      }}>
+                    UI UX DESIGNER
+                  </h2>
+                  
+                </div>
             </div>
+
           </div>
       </div>
     </section>
