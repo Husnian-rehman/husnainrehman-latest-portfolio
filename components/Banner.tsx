@@ -52,7 +52,7 @@ export default function Banner({
   ]
 
   return (
-    <section className="relative overflow-hidden bg-white md:pt-[100px] pt-[40px] 2xl:pb-50 lg:pb-70 pb-90 mb-20">
+    <section className="relative overflow-hidden bg-white md:pt-[100px] pt-[40px] 2xl:pb-50 lg:pb-70 pb-90 sm:mb-20 mb-10">
        {(image || secondaryImage) && (
             <div className="flex items-center justify-center absolute bottom-0 left-0">
               <div className="relative lg:min-w-[460px] 2xl:min-w-[600px] sm:min-w-[363px] min-w-[300px] w-full 2xl:h-[530px] lg:h-[409px] sm:h-[320px] h-[263px]">
@@ -83,7 +83,7 @@ export default function Banner({
               {title}
             </h1>
             <div className="xl:w-[67%] lg:w-[65%] ml-auto">
-              <p className=" text-base font-[600] max-w-[685px] leading-7 text-[#545b63] sm:text-lg mb-8">
+              <p className=" text-base font-[600] lg:max-w-[685px] leading-7 text-[#545b63] sm:text-lg mb-8">
                 {description}
               </p>
               <div className='flex md:gap-4 gap-8 items-center flex-wrap '>
@@ -122,12 +122,12 @@ export default function Banner({
                   ))}
                 </div>
               </div>
-              <div className=" relative hidden lg:flex flex-col items-center mt-5">
-                  <h2 className="2xl:text-[98px] xl:text-[80px] lg:text-[70px] text-[50px] font-bold tracking-tighter text-transparent"
+              <div className=" relative hidden lg:flex flex-col items-start mt-5">
+                  <h2 className="2xl:text-[98px] xl:text-[80px] lg:text-[63px] text-[50px] font-bold tracking-tighter text-transparent"
                       style={{ WebkitTextStroke: '1px #333' }}>
                     UI UX DESIGNER
                   </h2>
-                  <h2 className="2xl:text-[98px] xl:text-[80px]  lg:text-[70px] text-[50px] font-bold tracking-tighter text-transparent select-none"
+                  <h2 className="2xl:text-[98px] xl:text-[80px]  lg:text-[63px] text-[50px] font-bold tracking-tighter text-transparent select-none"
                       style={{ 
                         WebkitTextStroke: '1px #ccc',
                         transform: 'scaleY(-1)',
@@ -140,6 +140,10 @@ export default function Banner({
             </div>
           </div>
       </div>
+      
     </section>
+
+    
+   
   )
 }
