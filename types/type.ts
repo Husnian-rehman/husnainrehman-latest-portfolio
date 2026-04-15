@@ -57,14 +57,32 @@ export interface BannerProps {
       url?: string
       _id?: string
     }
-    hotspot?: any
+    hotspot?: unknown
   }
   secondaryImage?: {
     asset?: {
       url?: string
       _id?: string
     }
-    hotspot?: any
+    hotspot?: unknown
   }
+}
+
+export interface SkillSlideCard {
+  heading?: string
+  percent?: string
+  image?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: unknown
+  }
+}
+
+export interface SkillSliderProps {
+  sectionTitle?: string
+  sectionSubtitle?: string
+  cards?: SkillSlideCard[]
 }
 

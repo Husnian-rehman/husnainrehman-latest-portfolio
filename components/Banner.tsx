@@ -58,11 +58,9 @@ export default function Banner({
               <div className="relative lg:min-w-[460px] 2xl:min-w-[600px] sm:min-w-[363px] min-w-[300px] w-full 2xl:h-[530px] lg:h-[409px] sm:h-[320px] h-[263px]">
                 {image && (
                   <div className="absolute right-0 w-[80%] top-0 z-9 ">
-                    <img
-                      src={urlFor(image).width(597).height(653).url()}
+                    <img  src={urlFor(image).width(597).height(653).url()}
                       alt="Banner"
-                      className="w-full h-full object-cover"
-                    />
+                      className="w-full h-full object-cover"  />
                   </div>
                 )}
                 {secondaryImage && (
@@ -129,7 +127,6 @@ export default function Banner({
                       style={{ WebkitTextStroke: '1px #333' }}>
                     UI UX DESIGNER
                   </h2>
-
                   <h2 className="2xl:text-[98px] xl:text-[80px]  lg:text-[70px] text-[50px] font-bold tracking-tighter text-transparent select-none"
                       style={{ 
                         WebkitTextStroke: '1px #ccc',
@@ -139,10 +136,8 @@ export default function Banner({
                       }}>
                     UI UX DESIGNER
                   </h2>
-                  
                 </div>
             </div>
-
           </div>
       </div>
     </section>
