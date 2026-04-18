@@ -86,3 +86,22 @@ export interface SkillSliderProps {
   cards?: SkillSlideCard[]
 }
 
+export interface AboutUsLink {
+  label?: string
+  href?: string
+}
+
+export interface AboutUsProps {
+  title?: string
+  description?: string
+  experienceText?: string
+  image?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: unknown
+  }
+  link?: AboutUsLink
+}
+

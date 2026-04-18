@@ -140,10 +140,6 @@ export default function Banner({
             </div>
           </div>
       </div>
-      
     </section>
-
-    
-   
   )
 }
