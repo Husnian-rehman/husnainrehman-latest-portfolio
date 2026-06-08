@@ -25,7 +25,7 @@ export default function AboutUs({
             <div className='flex md:flex-row flex-col gap-10'> 
                 <div className="md:w-[50%] xl:pl-30 md:pl-20 pl-[55px] relative">
                     <svg className='absolute top-0 left-0' xmlns="http://www.w3.org/2000/svg" width="45" height="339" viewBox="0 0 45 339" fill="none">
-                    <path d="M1 1V338C8.90805 305.345 20 295 44 284.711" stroke="#0F0E0E" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M1 1V338C8.90805 305.345 20 295 44 284.711" stroke="#0F0E0E" strokeWidth={2} strokeLinecap="round" />
                     </svg>
                     <div className="lg:mb-20 mb-10">
                         <p className="lg:text-[200px] text-[140px] lg:mb-[50px] mb-[30px] leading-none font-bold text-[#000]">
