@@ -18,7 +18,7 @@ export default function AboutUs({
                 {title}
                 </h2>
             </div>
-            <p className="xl:text-[52px] md:text-[40px] text-[27px] leading-[1.2] text-[var(--primary)] font-[600] sm:mt-[50px] mt-[30px] mb-[35px]">
+            <p className="xl:text-[30px] md:text-[25px] text-[20px] leading-[1.2] text-[var(--primary)] font-[600] sm:mt-[50px] mt-[30px] mb-[35px]">
             {description}
             </p>
           </div>

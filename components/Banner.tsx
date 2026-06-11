@@ -131,7 +131,7 @@ export default function Banner({
                       style={{ 
                         WebkitTextStroke: '1px #ccc',
                         transform: 'scaleY(-1)',
-                         maskImage: 'linear-gradient(transparent, rgba(18, 15, 37, 0.5))',
+                         maskImage: 'linear-gradient(transparent, rgb(18 15 37 / 96%))',
                            marginTop: '-40px',
                       }}>
                     UI UX DESIGNER
