@@ -105,3 +105,20 @@ export interface AboutUsProps {
   link?: AboutUsLink
 }
 
+export interface ServiceLink {
+  label?: string
+  href?: string
+}
+
+export interface ServiceCard {
+  title?: string
+  description?: string
+  link?: ServiceLink
+}
+
+export interface OurServicesProps {
+  sectionTitle?: string
+  sectionSubtitle?: string
+  services?: ServiceCard[]
+}
+

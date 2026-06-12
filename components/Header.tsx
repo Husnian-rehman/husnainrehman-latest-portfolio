@@ -14,10 +14,10 @@ export default function Header({
   return (
     <header className="w-full !py-[10px] border-b border-gray-200">
       <div className="max-w-[1400px] mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-3">
-              <div className=" h-12 rounded overflow-hidden flex items-center justify-center">
+              <div className=" h-[80px] rounded overflow-hidden flex items-center justify-center">
                 {logoUrl ? (
                   // use plain img to avoid external image config issues
                   <img src={logoUrl} alt="logo" className="w-full h-full object-contain" />
