@@ -10,9 +10,9 @@ export default function MarqueeSection({ items }: MarqueeSectionProps) {
   }
 
   return (
-    <section className="md:py-14 py-10">
+    <section className="md:py-12 py-10">
       <div className="mx-auto px-4">
-        <MarqueeText items={items} speed={25} />
+         <MarqueeText items={items} speed={25} />
       </div>
     </section>
   )

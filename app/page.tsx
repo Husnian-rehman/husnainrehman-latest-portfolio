@@ -3,6 +3,7 @@ import MarqueeSection from '@/components/MarqueeSection'
 import SkillSlider from '@/components/SkillSlider'
 import AboutUs from '@/components/AboutUs'
 import OurServices from '@/components/OurServices'
+import ContactForm from '@/components/ContactForm'
 import { client } from '../sanity/lib/client'
 import GET_BANNER from '../sanity/queries/getbanner'
 import GET_FOOTER from '../sanity/queries/getfooter'
@@ -42,6 +43,7 @@ export default async function Home() {
       />
       <OurServices data={ourServicesData} />
       <MarqueeSection items={marqueeData?.items} />
+      <ContactForm />
     </main>
   )
 }
