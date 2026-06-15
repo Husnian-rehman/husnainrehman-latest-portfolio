@@ -5,7 +5,8 @@ import banner from './banner'
 import aboutUs from './aboutUs'
 import ourServices from './ourServices'
 import skillSlider from './skillSlider'
+import marquee from './marquee'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [header, footer, banner, aboutUs, ourServices, skillSlider],
+  types: [header, footer, banner, aboutUs, ourServices, skillSlider, marquee],
 }

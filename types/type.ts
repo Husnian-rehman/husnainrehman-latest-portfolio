@@ -68,6 +68,10 @@ export interface BannerProps {
   }
 }
 
+export interface MarqueeProps {
+  items?: string[] | null
+}
+
 export interface SkillSlideCard {
   heading?: string
   percent?: string

@@ -44,14 +44,14 @@ export default function OurServices({ data }: { data?: OurServicesProps } = {}) 
                     {service.link?.label && service.link?.href ? (
                         <a
                         href={service.link.href}
-                        className="inline-flex items-center gap-4  text-[#000]  font-semibold text-[#fff] translate-x-[105px] group-hover:translate-x-0 transition-all ease-in-out duration-400  "
+                        className="inline-flex items-center gap-4  text-[#000]  font-semibold text-[#fff] md:translate-x-[105px] group-hover:translate-x-0 transition-all ease-in-out duration-400  "
                         target={/^(https?:|mailto:|tel:)/.test(service.link.href) ? '_blank' : undefined}
                         rel={/^(https?:|mailto:|tel:)/.test(service.link.href) ? 'noreferrer noopener' : undefined}
                         >
                         <span aria-hidden="true" className=" transition-all ease-in-out duration-400 group-hover:text-[#000] text-[#fff] group-hover:bg-[#fff] rounded-full border border-[#fff] w-[30px] h-[30px] flex items-center justify-center text-md">
                             ↗
                         </span>
-                        <span className="opacity-0 group-hover:opacity-100 group-hover:visibility visible  transition-all ease-in-out duration-400">
+                        <span className="md:translate-x-0  translate-x-[105px] group-hover:translate-x-0 opacity-0 group-hover:opacity-100 group-hover:visibility visible  transition-all ease-in-out duration-400">
                             {service.link.label}
                         </span>
                         

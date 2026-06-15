@@ -1,4 +1,5 @@
 import Banner from '@/components/Banner'
+import MarqueeSection from '@/components/MarqueeSection'
 import SkillSlider from '@/components/SkillSlider'
 import AboutUs from '@/components/AboutUs'
 import OurServices from '@/components/OurServices'
@@ -8,10 +9,12 @@ import GET_FOOTER from '../sanity/queries/getfooter'
 import GET_SKILL_SLIDER from '../sanity/queries/getskillslider'
 import GET_ABOUT_US from '../sanity/queries/getaboutus'
 import GET_OUR_SERVICES from '../sanity/queries/getourservices'
-import type { AboutUsProps, BannerProps, OurServicesProps, SkillSliderProps } from '@/types/type'
+import GET_MARQUEE from '../sanity/queries/getmarquee'
+import type { AboutUsProps, BannerProps, OurServicesProps, SkillSliderProps, MarqueeProps } from '@/types/type'
 
 export default async function Home() {
   const bannerData = await client.fetch<BannerProps>(GET_BANNER)
+  const marqueeData = await client.fetch<MarqueeProps>(GET_MARQUEE)
   const footerData = await client.fetch(GET_FOOTER)
   const aboutData = await client.fetch<AboutUsProps>(GET_ABOUT_US)
   const skillSliderData = await client.fetch<SkillSliderProps>(GET_SKILL_SLIDER)
@@ -38,6 +41,7 @@ export default async function Home() {
         link={aboutData?.link}
       />
       <OurServices data={ourServicesData} />
+      <MarqueeSection items={marqueeData?.items} />
     </main>
   )
 }
