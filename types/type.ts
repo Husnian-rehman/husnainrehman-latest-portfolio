@@ -126,3 +126,30 @@ export interface OurServicesProps {
   services?: ServiceCard[]
 }
 
+export interface ContactItem {
+  icon?: string
+  label?: string
+  href?: string
+}
+
+export interface ExtraSectionProps {
+  sectionTitle?: string
+  sectionSubtitle?: string
+  description?: string
+  primaryCta?: BannerCta
+  contactItems?: ContactItem[]
+}
+
+export interface ExtraSectionCard {
+  title?: string
+  subtitle?: string
+  description?: string
+}
+
+export interface ExtraSectionProps {
+  sectionTitle?: string
+  sectionSubtitle?: string
+  description?: string
+  cards?: ExtraSectionCard[]
+}
+
