@@ -29,7 +29,7 @@ export default function OurServices({ data }: { data?: OurServicesProps } = {}) 
               className="group flex flex-col md:flex-row md:items-center justify-between md:gap-6 gap-3 rounded-[16px] border border-[#2f2f2f] bg-[#090909] p-6 transition-all ease-in-out duration-400 hover:border-[#fff] group overflow-hidden"
             >
              
-                <div className="flex items-center gap-[30px]">
+                <div className="flex items-center gap-[30px] max-w-[350px] w-full">
                     <div className="shrink-0 text-[#fff] font-semibold text-[20px]">
                     {String(index + 1).padStart(2, '0')}
                     </div>

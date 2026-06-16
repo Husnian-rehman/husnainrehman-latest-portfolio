@@ -103,11 +103,11 @@ export default function Footer({
         </div>
 
         {/* Copyright Section */}
-        <div className="text-center flex flex-wrap sm:flex-row flex-col-reverse md:justify-between justify-center items-center gap-4">
+        <div className="text-center flex flex-wrap sm:flex-row flex-col-reverse justify-center items-center gap-4">
           <p className="text-sm text-[var(--primary)] font-medium tracking-wide">
             {copyright}
           </p>
-          <div className="flex justify-center items-center sm:gap-6 gap-2 ">
+          {/* <div className="flex justify-center items-center sm:gap-6 gap-2 ">
             <a
               href="#privacy"
               className="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors duration-300 relative group"
@@ -123,7 +123,7 @@ export default function Footer({
               Terms of Service
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-900 group-hover:w-full transition-all duration-300" />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
