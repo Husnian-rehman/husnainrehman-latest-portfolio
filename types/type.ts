@@ -68,6 +68,34 @@ export interface BannerProps {
   }
 }
 
+export interface TestimonialCta {
+  label?: string
+  href?: string
+}
+
+export interface TestimonialImage {
+  asset?: {
+    url?: string
+    _id?: string
+  }
+}
+
+export interface TestimonialItem {
+  quote?: string
+  name?: string
+  role?: string
+  image?: TestimonialImage
+}
+
+export interface TestimonialProps {
+  sectionTitle?: string
+  sectionSubtitle?: string
+  rating?: number
+  reviewCount?: number
+  testimonialCta?: TestimonialCta
+  testimonials?: TestimonialItem[]
+}
+
 export interface MarqueeProps {
   items?: string[] | null
 }
@@ -123,6 +151,13 @@ export interface ServiceCard {
 export interface OurServicesProps {
   sectionTitle?: string
   sectionSubtitle?: string
+  backgroundImage?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: unknown
+  }
   services?: ServiceCard[]
 }
 
@@ -136,6 +171,13 @@ export interface ExtraSectionProps {
   sectionTitle?: string
   sectionSubtitle?: string
   description?: string
+  backgroundImage?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: unknown
+  }
   primaryCta?: BannerCta
   contactItems?: ContactItem[]
 }
@@ -151,5 +193,13 @@ export interface ExtraSectionProps {
   sectionSubtitle?: string
   description?: string
   cards?: ExtraSectionCard[]
+}
+
+export interface VideoProps {
+  sectionTitle?: string
+  sectionSubtitle?: string
+  poster?: { asset?: { url?: string } }
+  videoUrl?: string
+  videoFile?: { asset?: { url?: string } }
 }
 

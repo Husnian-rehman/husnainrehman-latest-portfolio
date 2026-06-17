@@ -5,6 +5,8 @@ import AboutUs from '@/components/AboutUs'
 import OurServices from '@/components/OurServices'
 import ContactForm from '@/components/ContactForm'
 import ExtraSection from '@/components/ExtraSection'
+import TestimonialSection from '@/components/TestimonialSection'
+import VideoSection from '@/components/VideoSection'
 import { client } from '../sanity/lib/client'
 import GET_BANNER from '../sanity/queries/getbanner'
 import GET_FOOTER from '../sanity/queries/getfooter'
@@ -13,7 +15,9 @@ import GET_ABOUT_US from '../sanity/queries/getaboutus'
 import GET_OUR_SERVICES from '../sanity/queries/getourservices'
 import GET_MARQUEE from '../sanity/queries/getmarquee'
 import GET_EXTRA_SECTION from '../sanity/queries/getextraSection'
-import type { AboutUsProps, BannerProps, ExtraSectionProps, OurServicesProps, SkillSliderProps, MarqueeProps } from '@/types/type'
+import GET_TESTIMONIALS from '../sanity/queries/gettestimonials'
+import GET_VIDEO from '../sanity/queries/getvideo'
+import type { AboutUsProps, BannerProps, ExtraSectionProps, OurServicesProps, SkillSliderProps, MarqueeProps, TestimonialProps, VideoProps } from '@/types/type'
 
 export default async function Home() {
   const bannerData = await client.fetch<BannerProps>(GET_BANNER)
@@ -21,6 +25,8 @@ export default async function Home() {
   const footerData = await client.fetch(GET_FOOTER)
   const aboutData = await client.fetch<AboutUsProps>(GET_ABOUT_US)
   const skillSliderData = await client.fetch<SkillSliderProps>(GET_SKILL_SLIDER)
+  const testimonialData = await client.fetch<TestimonialProps>(GET_TESTIMONIALS)
+  const videoData = await client.fetch<VideoProps>(GET_VIDEO)
   const ourServicesData = await client.fetch<OurServicesProps>(GET_OUR_SERVICES)
   const extraSectionData = await client.fetch<ExtraSectionProps>(GET_EXTRA_SECTION)
 
@@ -45,9 +51,12 @@ export default async function Home() {
         link={aboutData?.link}
       />
       <OurServices data={ourServicesData} />
+     
       <MarqueeSection items={marqueeData?.items} />
-       <ExtraSection data={extraSectionData ?? undefined} />
+      <TestimonialSection data={testimonialData ?? undefined} />
       <ContactForm />
+      <VideoSection data={videoData ?? undefined} />
+       <ExtraSection data={extraSectionData ?? undefined} />
     </main>
   )
 }

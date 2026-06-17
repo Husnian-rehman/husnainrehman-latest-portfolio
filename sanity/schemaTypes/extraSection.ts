@@ -23,6 +23,13 @@ export default defineType({
       rows: 4,
     },
     {
+      name: 'backgroundImage',
+      title: 'Background Image',
+      type: 'image',
+      description: 'Optional section background image',
+      options: {hotspot: true},
+    },
+    {
       name: 'primaryCta',
       title: 'Primary CTA',
       type: 'object',

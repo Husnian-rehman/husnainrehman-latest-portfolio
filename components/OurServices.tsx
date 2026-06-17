@@ -2,9 +2,11 @@ import type { OurServicesProps } from '../types/type'
 
 export default function OurServices({ data }: { data?: OurServicesProps } = {}) {
   const services = data?.services ?? []
+  const backgroundImage = (data as any).backgroundImage?.asset?.url
+  const sectionStyle = backgroundImage ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined
 
   return (
-    <section className="bg-[#171914] text-white py-16 ">
+    <section className="bg-[#171914] text-white py-16 bg-center bg-cover" style={sectionStyle}>
       <div className="max-w-[1400px] mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">

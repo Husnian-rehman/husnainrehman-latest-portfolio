@@ -63,8 +63,8 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="bg-gray-300 pt-16">
-      <div className="max-w-[1400px] mx-auto px-4 mb-10">
+    <section className="bg-gray-300 lg:py-30 py-16">
+      <div className="max-w-[1400px] mx-auto px-4 ">
         <div className="flex justify-center lg:flex-row flex-col gap-10 ">
           <div className="mb-10 lg:w-[40%] flex flex-col lg:justify-start lg:items-start items-center lg:text-left text-center justify-center">
             <div className="flex items-center  gap-4 lg:mb-10 mb-4"><span className="block h-0.5 w-14 bg-black"></span><p className=" text-base md:text-lg text-black">Get in touch</p></div>
@@ -207,7 +207,7 @@ export default function ContactForm() {
           </form>
         </div>
       </div>
-      <div>
+      {/* <div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d106281.69750266711!2d73.08678170711156!3d33.649308804120714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1781614697432!5m2!1sen!2s"
           width="100%"
@@ -218,7 +218,7 @@ export default function ContactForm() {
           referrerPolicy="no-referrer-when-downgrade"
           className="w-full md:h-[450px] h-[300px] mt-10"
         ></iframe>
-      </div>
+      </div> */}
     </section>
   )
 }

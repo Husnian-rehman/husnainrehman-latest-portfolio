@@ -6,6 +6,8 @@ export default function ExtraSection({ data }: { data?: ExtraSectionProps }) {
   const description = data?.description ?? ''
   const primaryCta = data?.primaryCta
   const contactItems = data?.contactItems ?? []
+  const backgroundImage = (data as any).backgroundImage?.asset?.url
+  const sectionStyle = backgroundImage ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined
 
   const getIcon = (icon?: string) => {
     switch (icon) {
@@ -21,7 +23,7 @@ export default function ExtraSection({ data }: { data?: ExtraSectionProps }) {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[#050505] text-white py-24">
+    <section className="relative overflow-hidden bg-[#050505] text-white py-24 bg-center bg-cover" style={sectionStyle}>
       <div className="relative max-w-[1100px] mx-auto px-4 text-center">
         {sectionSubtitle ? <p className="text-sm uppercase tracking-[0.4em] text-white/60 mb-4">{sectionSubtitle}</p> : null}
         {sectionTitle ? <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-white">{sectionTitle}</h2> : null}

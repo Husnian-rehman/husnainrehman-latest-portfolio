@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from 'react'
-// @ts-expect-error - @splidejs/react-splide has unresolved type exports
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import { urlFor } from '../sanity/lib/image'

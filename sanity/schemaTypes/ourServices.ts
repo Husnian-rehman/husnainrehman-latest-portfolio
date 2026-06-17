@@ -17,6 +17,13 @@ export default defineType({
       type: 'text',
     },
     {
+      name: 'backgroundImage',
+      title: 'Background Image',
+      type: 'image',
+      description: 'Optional section background image',
+      options: {hotspot: true},
+    },
+    {
       name: 'services',
       title: 'Services',
       type: 'array',
