@@ -52,7 +52,7 @@ export default function Banner({
   ]
 
   return (
-    <section className="relative overflow-hidden bg-white md:pt-[100px] pt-[40px] 2xl:pb-50 lg:pb-70 pb-90 sm:mb-20 mb-10">
+    <section className="relative overflow-hidden bg-white md:pt-[60px] pt-[40px] 2xl:pb-40 lg:pb-70 pb-90 mb-10">
        {(image || secondaryImage) && (
             <div className="flex items-center justify-center absolute bottom-0 left-0">
               <div className="relative lg:min-w-[460px] 2xl:min-w-[600px] sm:min-w-[363px] min-w-[300px] w-full 2xl:h-[530px] lg:h-[409px] sm:h-[320px] h-[263px]">
@@ -83,21 +83,21 @@ export default function Banner({
               {title}
             </h1>
             <div className="xl:w-[67%] lg:w-[65%] ml-auto">
-              <p className=" text-base font-[600] lg:max-w-[685px] leading-7 text-[#545b63] sm:text-lg mb-8">
+              <p className=" text-base font-[600] lg:max-w-[850px] leading-7 text-[#545b63] sm:text-lg mb-8">
                 {description}
               </p>
               <div className='flex md:gap-4 gap-8 items-center flex-wrap '>
                 <div className="flex items-start gap-4">
                   <a
                     href={safePrimaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full bg-[var(--primary)] sm:px-8 px-5 py-4 tracking-[0.1em] sm:text-[17px] text-[13px]  font-semibold text-white shadow-lg shadow-black/10 transition-all ease-in-out duration-500 hover:translate-y-[-1px] hover:opacity-95"
+                    className="inline-flex items-center justify-center rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none bg-[var(--primary)] sm:px-8 px-5 py-4 tracking-[0.1em] sm:text-[17px] text-[13px]  font-semibold text-white shadow-lg shadow-black/10 transition-all ease-in-out duration-500 hover:translate-y-[-1px] hover:opacity-95"
                   >
                     {safePrimaryCta.label}
                     <span className="ml-2 text-white">↗</span>
                   </a>
                   <a
                     href={safeSecondaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full border border-[var(--primary)] sm:px-8 px-5 py-4 tracking-[0.1em] sm:text-[17px] text-[13px] font-semibold text-[var(--primary)] transition-all ease-in-out duration-500 hover:bg-[var(--primary)] hover:text-white"
+                    className="inline-flex items-center justify-center rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none border border-[var(--primary)] sm:px-8 px-5 py-4 tracking-[0.1em] sm:text-[17px] text-[13px] font-semibold text-[var(--primary)] transition-all ease-in-out duration-500 hover:bg-[var(--primary)] hover:text-white"
                   >
                     {safeSecondaryCta.label}
                   </a>

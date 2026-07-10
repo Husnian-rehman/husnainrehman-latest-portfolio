@@ -36,7 +36,7 @@ export default function AboutUs({
                     {link?.label && link?.href ? (
                         <a
                         href={link.href}
-                        className="inline-flex items-center justify-center rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none bg-[var(--primary)] p-2 max-w-[150px] sm:h-[70px] h-[50px] w-full text-[14px] font-semibold text-white transition hover:opacity-95"
+                        className="inline-flex items-center justify-center rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none bg-[var(--primary)] p-2 max-w-[160px] sm:h-[60px] h-[50px] w-full text-[18px] font-semibold text-white transition hover:opacity-95"
                         >
                         {link.label}
                         <span className="ml-2 text-white">↗</span>

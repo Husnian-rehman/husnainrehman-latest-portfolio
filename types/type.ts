@@ -161,6 +161,34 @@ export interface OurServicesProps {
   services?: ServiceCard[]
 }
 
+export interface OurProjectsProjectLink {
+  label?: string
+  href?: string
+}
+
+export interface OurProjectsProject {
+  title?: string
+  image?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: unknown
+  }
+  link?: OurProjectsProjectLink
+}
+
+export interface OurProjectsTab {
+  title?: string
+  projects?: OurProjectsProject[]
+}
+
+export interface OurProjectsProps {
+  sectionTitle?: string
+  sectionSubtitle?: string
+  tabs?: OurProjectsTab[]
+}
+
 export interface ContactItem {
   icon?: string
   label?: string

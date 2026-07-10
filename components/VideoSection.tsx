@@ -27,18 +27,18 @@ export default function VideoSection({ data }: { data?: VideoProps }) {
   const sectionStyle = bgImage ? { backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined
 
   return (
-    <section className="bg-white text-white py-20 bg-center bg-cover" style={sectionStyle}>
-      <div className="max-w-[1600px] mx-auto px-4">
+    <section className="overflow-hidden bg-white text-white bg-center bg-cover" style={sectionStyle}>
+      <div className="">
 
-        <div className="hover:scale-[1.1] cursor-grab transition-all ease-in-out duration-300 relative rounded-3xl overflow-hidden shadow-lg">
+        <div className="hover:scale-[1.03] cursor-grab transition-all ease-in-out duration-300 relative  overflow-hidden shadow-lg">
           {!playing ? (
             /* Hero with play button */
             <>
-              <div className="w-full md:h-[650px] h-[400px] rounded-xl flex items-center justify-center bg-black/40" />
+              <div className="w-full md:h-[650px] h-[400px]  flex items-center justify-center bg-black/40" />
               <button
                 type="button"
                 onClick={() => setPlaying(true)}
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all hover:scale-105"
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center border border-white/10 bg-white/5 text-white transition-all hover:scale-105"
                 aria-label="Play video"
               >
                 <svg className="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@ export default function VideoSection({ data }: { data?: VideoProps }) {
             </>
           ) : (
             /* Inline playing video */ 
-            <div className="w-full md:h-[650px] h-[400px] rounded-xl overflow-hidden bg-black ">
+            <div className="w-full md:h-[650px] h-[400px]  overflow-hidden bg-black ">
               {videoFile ? (
                 <video src={videoFile} autoPlay muted playsInline loop className="w-full h-full object-cover" />
               ) : videoUrl ? (

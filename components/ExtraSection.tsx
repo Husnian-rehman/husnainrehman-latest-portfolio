@@ -23,7 +23,7 @@ export default function ExtraSection({ data }: { data?: ExtraSectionProps }) {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[#050505] text-white py-24 bg-center bg-cover" style={sectionStyle}>
+    <section className="relative overflow-hidden bg-[#050505] text-white py-20 bg-center bg-cover" style={sectionStyle}>
       <div className="relative max-w-[1100px] mx-auto px-4 text-center">
         {sectionSubtitle ? <p className="text-sm uppercase tracking-[0.4em] text-white/60 mb-4">{sectionSubtitle}</p> : null}
         {sectionTitle ? <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-white">{sectionTitle}</h2> : null}
@@ -32,7 +32,7 @@ export default function ExtraSection({ data }: { data?: ExtraSectionProps }) {
         {primaryCta?.label && primaryCta?.href ? (
           <a
             href={primaryCta.href}
-            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white px-9 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#0f0f0f] transition hover:bg-white/90"
+            className="inline-flex items-center  justify-center rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none border border-white/20 bg-white px-9 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#0f0f0f] transition hover:bg-white/90"
           >
             {primaryCta.label}
           </a>

@@ -35,7 +35,7 @@ export default function TestimonialSection({ data }: TestimonialSectionProps) {
   const ctaHref = data.testimonialCta?.href ?? '#contact'
 
   return (
-    <section className="bg-black text-white py-24">
+    <section className="bg-black text-white py-20">
       <div className="max-w-[1400px] mx-auto px-4">
         <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-4 mb-4">
@@ -73,7 +73,7 @@ export default function TestimonialSection({ data }: TestimonialSectionProps) {
           >
             {testimonialItems.map((item, index) => (
               <SplideSlide key={`${item.name}-${index}`}>
-                <div className="h-full rounded-[32px] border border-white/10 bg-white/5 p-10 shadow-[0_30px_90px_rgba(0,0,0,0.3)] transition-all duration-300 ">
+                <div className="h-full rounded-tl-none rounded-tr-2xl rounded-bl-2xl rounded-br-none border border-white/10 bg-white/5 p-10 shadow-[0_30px_90px_rgba(0,0,0,0.3)] transition-all duration-300 ">
                   <div className="mb-8 text-3xl leading-snug text-white sm:text-[2rem] md:text-[2.2rem]">
                     {item.quote}
                   </div>

@@ -28,6 +28,7 @@ export const structure: StructureResolver = (S) =>
                  S.documentTypeListItem('siteBanner').title('Banner'),
                  S.documentTypeListItem('siteAboutUs').title('About Us'),
                  S.documentTypeListItem('siteOurServices').title('Our Services'),
+                 S.documentTypeListItem('siteOurProjects').title('Our Projects'),
                  S.documentTypeListItem('siteSkillSlider').title('Skill Slider'),
                  S.documentTypeListItem('siteVideo').title('Video'),
                  S.documentTypeListItem('siteTestimonials').title('Testimonials'),

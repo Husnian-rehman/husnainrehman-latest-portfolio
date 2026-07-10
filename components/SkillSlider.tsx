@@ -47,7 +47,7 @@ export default function SkillSlider({ data }: { data?: SkillSliderProps } = {}) 
   const cards = displayData?.cards ?? []
 
   return (
-    <section className="bg-[#fff] sm:py-16 py-10">
+    <section className="bg-[#fff] py-10">
       <div className=" mx-auto px-4">
       
         <Splide
@@ -78,13 +78,13 @@ export default function SkillSlider({ data }: { data?: SkillSliderProps } = {}) 
         >
           {cards.map((card: SkillSlideCard, index: number) => (
             <SplideSlide key={`${card.heading ?? 'card'}-${index}`}>
-              <div className="sm:rounded-[120px] rounded-[50px] border border-slate-200 bg-white px-5 sm:pt-10 pt-5 sm:pb-20 pb-10 transition-all ease-in-out duration-300 flex items-center justify-center flex-col text-center">
-                <div className="mx-auto mb-15 sm:h-[136px] h-[80px] sm:max-w-[136px] max-w-[80px] w-full overflow-hidden rounded-full bg-[#f3f3f3] flex items-center justify-center">
+              <div className=" rounded-tl-none rounded-tr-3xl rounded-bl-3xl rounded-br-none border border-slate-200 bg-white px-5 sm:pt-10 pt-5 sm:pb-10 pb-10 transition-all ease-in-out duration-300 flex items-center justify-center flex-col text-center">
+                <div className="mx-auto mb-5 sm:h-[100px] h-[80px] sm:max-w-[100px] max-w-[80px] w-full overflow-hidden rounded-full bg-[#f3f3f3] flex items-center justify-center">
                   {card.image?.asset?.url ? (
                     <img
                       src={urlFor(card.image).width(73).height(73).url()}
                       alt={card.heading ?? 'Skill image'}
-                      className="sm:h-[73px] h-[40px] sm:w-[73px] w-[40px] object-contain"
+                      className="sm:h-[55px] h-[40px] sm:w-[55px] w-[40px] object-contain"
                     />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-[var(--primary)] text-white text-2xl font-bold">

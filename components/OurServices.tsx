@@ -6,7 +6,7 @@ export default function OurServices({ data }: { data?: OurServicesProps } = {}) 
   const sectionStyle = backgroundImage ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined
 
   return (
-    <section className="bg-[#171914] text-white py-16 bg-center bg-cover" style={sectionStyle}>
+    <section className="bg-[#171914] text-white  py-16 md:py-25 bg-center bg-cover" style={sectionStyle}>
       <div className="max-w-[1400px] mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">
@@ -28,7 +28,7 @@ export default function OurServices({ data }: { data?: OurServicesProps } = {}) 
           {services.map((service, index) => (
             <div
               key={service.title || index}
-              className="group flex flex-col md:flex-row md:items-center justify-between md:gap-6 gap-3 rounded-[16px] border border-[#2f2f2f] bg-[#090909] p-6 transition-all ease-in-out duration-400 hover:border-[#fff] group overflow-hidden"
+              className="group flex flex-col md:flex-row md:items-center justify-between md:gap-6 gap-3 rounded-tl-none rounded-tr-2xl rounded-bl-2xl rounded-br-none border border-[#2f2f2f] bg-[#090909] p-6 transition-all ease-in-out duration-400 hover:border-[#fff] group overflow-hidden"
             >
              
                 <div className="flex items-center gap-[30px] max-w-[350px] w-full">
