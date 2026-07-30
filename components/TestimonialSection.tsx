@@ -31,6 +31,7 @@ export default function TestimonialSection({ data }: TestimonialSectionProps) {
     'Explore real feedback from clients who have experienced my work and trusted my process. Each testimonial reflects my commitment to quality.'
   const rating = data.rating ?? 4.9
   const reviewCount = data.reviewCount ?? 3000
+  const formattedReviewCount = reviewCount?.toLocaleString ? reviewCount.toLocaleString('en-US') : String(reviewCount)
   const ctaLabel = data.testimonialCta?.label ?? 'View All Reviews.'
   const ctaHref = data.testimonialCta?.href ?? '#contact'
 
@@ -112,7 +113,7 @@ export default function TestimonialSection({ data }: TestimonialSectionProps) {
                 ))}
               </span>
             </div>
-            <p className="text-sm font-semibold text-white">Over {reviewCount?.toLocaleString?.() ?? reviewCount} Reviews</p>
+            <p className="text-sm font-semibold text-white">Over {formattedReviewCount} Reviews</p>
           </div>
         </div>
       </div>

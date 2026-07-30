@@ -17,7 +17,7 @@ export const structure: StructureResolver = (S) =>
             ])
         ),
 
-             // ========== HOME PAGE (ONLY FEATURED COLLECTION) ==========
+      // ========== HOME PAGE (ONLY FEATURED COLLECTION) ==========
       S.listItem()
         .id("home-page-sections")
         .title("Home Page")
@@ -36,4 +36,18 @@ export const structure: StructureResolver = (S) =>
                  S.documentTypeListItem('siteExtraSection').title('Extra Section'),
             ])
         ),
+
+         // ========== ABOUT US PAGE SETTINGS ==========
+         S.listItem()
+        .id("about-us-page-settings")
+        .title("About Us Page")
+        .child(
+          S.list()
+            .title("About Us Page Settings")
+            .items([
+                 S.documentTypeListItem('siteAboutUsBanner').title('About Us Banner'),
+                 S.documentTypeListItem('siteAboutUsEducation').title('Education Section'),
+            ])
+        ),
+      
     ])

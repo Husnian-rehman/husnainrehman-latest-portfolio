@@ -137,6 +137,44 @@ export interface AboutUsProps {
   link?: AboutUsLink
 }
 
+export interface EducationCard {
+  yearRange?: string
+  title?: string
+  subtitle?: string
+  description?: string
+}
+
+export interface EducationSectionProps {
+  sectionTitle?: string
+  sectionSubtitle?: string
+  description?: string
+  cards?: EducationCard[]
+}
+
+export interface ResumeFile {
+  asset?: {
+    url?: string
+    _id?: string
+  }
+  originalFilename?: string
+}
+
+export interface AboutUsBannerProps {
+  pretitle?: string
+  title?: string
+  description?: string
+  image?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: unknown
+  }
+  resume?: ResumeFile
+  resumeLabel?: string
+  socialLinks?: SocialLink[]
+}
+
 export interface ServiceLink {
   label?: string
   href?: string
