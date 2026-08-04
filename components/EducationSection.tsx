@@ -13,7 +13,7 @@ export default function EducationSection({
         <div className="mb-16 text-center">
           <div className="inline-flex items-center gap-3">
             <span className="block h-0.5 w-14 bg-white" />
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#fff]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#fff]">
               {sectionTitle}
             </h2>
           </div>
@@ -41,14 +41,14 @@ export default function EducationSection({
 
                   <div className="flex items-center justify-center">
                     <div className="relative flex h-full items-center">
-                      <span className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-[#fff] shadow-lg shadow-[#ef4444]/30 text-2xl">
+                      <span className="relative z-10 flex h-17 w-17 items-center justify-center rounded-full bg-[#fff] shadow-lg shadow-[#ef4444]/30 text-2xl">
                         🎓
                       </span>
                     </div>
                   </div>
 
                   <div className={`w-full ${isRight ? 'lg:col-start-3 lg:row-start-1' : 'lg:col-start-1 lg:row-start-2'} ${!isRight ? 'lg:mt-10' : ''}`}>
-                    <div className="relative overflow-hidden rounded-tl-none rounded-tr-2xl rounded-bl-2xl rounded-br-none border border-white/10 bg-white/5 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur">
+                    <div className="relative overflow-hidden rounded-tl-none rounded-tr-2xl rounded-bl-2xl rounded-br-none border border-white/10 bg-white/5 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur hover:bg-white/10 transition-all duration-300 ease-in-out">
                       <span className="inline-flex rounded-full  text-sm font-semibold uppercase tracking-[0.18em] text-[#f87171]">
                         {card.yearRange}
                       </span>

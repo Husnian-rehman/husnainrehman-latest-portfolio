@@ -5,6 +5,7 @@ import banner from './banner'
 import aboutUs from './aboutUs'
 import aboutUsBanner from './aboutUsBanner'
 import aboutUsEducation from './aboutUsEducation'
+import workExperience from './workExperience'
 import ourServices from './ourServices'
 import ourProjects from './ourProjects'
 import skillSlider from './skillSlider'
@@ -14,5 +15,5 @@ import testimonial from './testimonial'
 import video from './video'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [header, footer, banner, aboutUs, aboutUsBanner, aboutUsEducation, ourServices, ourProjects, skillSlider, marquee, extraSection, testimonial, video],
+  types: [header, footer, banner, aboutUs, aboutUsBanner, aboutUsEducation, workExperience, ourServices, ourProjects, skillSlider, marquee, extraSection, testimonial, video],
 }

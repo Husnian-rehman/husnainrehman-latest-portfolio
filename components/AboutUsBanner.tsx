@@ -59,10 +59,10 @@ export default function AboutUsBanner({
   return (
     <section className="relative overflow-hidden !bg-white py-16 md:py-24">
       <div className="max-w-[1400px] px-5 mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           
-          <div>
+          <div className="lg:order-1 order-2">
             <p className="text-xl md:text-2xl font-semibold text-gray-700 mb-4">
               {pretitle}
             </p>

@@ -118,6 +118,29 @@ export interface SkillSliderProps {
   cards?: SkillSlideCard[]
 }
 
+export interface WorkExperienceCard {
+  year?: string
+  title?: string
+  company?: string
+  companyUrl?: string
+  dateRange?: string
+  description?: string
+}
+
+export interface WorkExperienceProps {
+  sectionTitle?: string
+  sectionSubtitle?: string
+  description?: string
+  cards?: WorkExperienceCard[]
+  backgroundImage?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: unknown
+  }
+}
+
 export interface AboutUsLink {
   label?: string
   href?: string
