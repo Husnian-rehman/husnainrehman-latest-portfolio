@@ -2,11 +2,7 @@ import type { WorkExperienceProps } from '../types/type'
 import { urlFor } from '../sanity/lib/image'
 
 export default function WorkExperience({ sectionTitle, sectionSubtitle, description, cards = [], backgroundImage }: WorkExperienceProps) {
-  const leftCards = cards.filter((_, i) => i % 2 === 0)
-  const rightCards = cards.filter((_, i) => i % 2 === 1)
-  const bgUrl = backgroundImage
-    ? backgroundImage.asset?.url ?? (urlFor(backgroundImage as any).width(1600).url())
-    : undefined
+  const bgUrl = backgroundImage?.asset?.url ?? (backgroundImage ? urlFor(backgroundImage as any).width(1600).url() : undefined)
 
   return (
     <section

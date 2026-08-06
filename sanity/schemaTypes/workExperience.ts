@@ -23,6 +23,14 @@ export default defineType({
       rows: 4,
     },
     {
+      name: 'backgroundImage',
+      title: 'Background Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'cards',
       title: 'Experience Cards',
       type: 'array',

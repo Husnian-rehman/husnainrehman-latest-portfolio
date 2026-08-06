@@ -50,5 +50,29 @@ export const structure: StructureResolver = (S) =>
                  S.documentTypeListItem('siteWorkExperience').title('Work Experience'),
             ])
         ),
+
+          // ========== Our Skills PAGE SETTINGS ==========
+         S.listItem()
+        .id("our-skills-page-settings")
+        .title("OurSkills Page")
+        .child(
+          S.list()
+            .title("OurSkills page Settings")
+            .items([
+                   S.documentTypeListItem('siteSkillSlider').title('Skill Slider'),
+            ])
+        ),
+
+          // ========== Contact us  PAGE SETTINGS ==========
+         S.listItem()
+        .id("contact-us-page-settings")
+        .title("Contact Us Page")
+        .child(
+          S.list()
+            .title("Contact Us page Settings")
+            .items([
+              S.documentTypeListItem('siteContactUsBanner').title('Contact Us Banner'),
+            ])
+        ),
       
     ])
