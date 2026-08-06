@@ -29,6 +29,7 @@ export const structure: StructureResolver = (S) =>
                  S.documentTypeListItem('siteAboutUs').title('About Us'),
                  S.documentTypeListItem('siteOurServices').title('Our Services'),
                  S.documentTypeListItem('siteOurProjects').title('Our Projects'),
+                 S.documentTypeListItem('siteAllProjects').title('All Projects'),
                  S.documentTypeListItem('siteSkillSlider').title('Skill Slider'),
                  S.documentTypeListItem('siteVideo').title('Video'),
                  S.documentTypeListItem('siteTestimonials').title('Testimonials'),
@@ -74,5 +75,28 @@ export const structure: StructureResolver = (S) =>
               S.documentTypeListItem('siteContactUsBanner').title('Contact Us Banner'),
             ])
         ),
+
+         // ========== Projects  PAGE SETTINGS ==========
+         S.listItem()
+        .id("projects-page-settings")
+        .title("Projects Page")
+        .child(
+          S.list()
+            .title("Projects page Settings")
+            .items([
+              S.documentTypeListItem('siteAllProjects').title('All Projects'),
+            ])
+        ),
       
+           // ========== AllServices  PAGE SETTINGS ==========
+         S.listItem()
+        .id("all-services-page-settings")
+        .title("All Services Page")
+        .child(
+          S.list()
+            .title("All Services page Settings")
+            .items([
+              S.documentTypeListItem('siteAllServices').title('All Services'),
+            ])
+        ),
     ])

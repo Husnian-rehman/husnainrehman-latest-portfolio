@@ -250,6 +250,36 @@ export interface OurProjectsProps {
   tabs?: OurProjectsTab[]
 }
 
+export interface AllProjectsProjectLink {
+  label?: string
+  href?: string
+}
+
+export interface AllProjectsProject {
+  title?: string
+  image?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: unknown
+  }
+  link?: AllProjectsProjectLink
+}
+
+export interface AllProjectsProps {
+  sectionTitle?: string
+  sectionSubtitle?: string
+  backgroundImage?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: unknown
+  }
+  projects?: AllProjectsProject[]
+}
+
 export interface ContactItem {
   icon?: string
   label?: string

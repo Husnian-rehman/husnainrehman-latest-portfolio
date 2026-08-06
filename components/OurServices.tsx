@@ -28,10 +28,10 @@ export default function OurServices({ data }: { data?: OurServicesProps } = {}) 
           {services.map((service, index) => (
             <div
               key={service.title || index}
-              className="group flex flex-col md:flex-row md:items-center justify-between md:gap-6 gap-3 rounded-tl-none rounded-tr-2xl rounded-bl-2xl rounded-br-none border border-[#2f2f2f] bg-[#090909] p-6 transition-all ease-in-out duration-400 hover:border-[#fff] group overflow-hidden"
+              className="group flex flex-col lg:flex-row lg:items-center justify-between lg:gap-6 gap-3 rounded-tl-none rounded-tr-2xl rounded-bl-2xl rounded-br-none border border-[#2f2f2f] bg-[#090909] p-6 transition-all ease-in-out duration-400 hover:border-[#fff] group overflow-hidden"
             >
              
-                <div className="flex items-center gap-[30px] max-w-[350px] w-full">
+                <div className="flex items-center gap-[30px] lg:max-w-[350px]  w-full">
                     <div className="shrink-0 text-[#fff] font-semibold text-[20px]">
                     {String(index + 1).padStart(2, '0')}
                     </div>
@@ -39,14 +39,14 @@ export default function OurServices({ data }: { data?: OurServicesProps } = {}) 
                         {service.title}
                     </h3>
                 </div>
-                  <p className="text-base leading-7 text-[#a8a8a8] lg:max-w-[400px] xl:max-w-[500px] md:max-w-[300px]">
+                  <p className="text-base leading-7 text-[#a8a8a8] lg:max-w-[400px] xl:max-w-[500px] ">
                     {service.description}
                   </p>
                  <div className="w-[137px] ">
                     {service.link?.label && service.link?.href ? (
                         <a
                         href={service.link.href}
-                        className="inline-flex items-center gap-4  text-[#000]  font-semibold text-[#fff] md:translate-x-[105px] group-hover:translate-x-0 transition-all ease-in-out duration-400  "
+                        className="inline-flex items-center gap-4  text-[#000]  font-semibold text-[#fff] lg:translate-x-[105px] group-hover:translate-x-0 transition-all ease-in-out duration-400  "
                         target={/^(https?:|mailto:|tel:)/.test(service.link.href) ? '_blank' : undefined}
                         rel={/^(https?:|mailto:|tel:)/.test(service.link.href) ? 'noreferrer noopener' : undefined}
                         >

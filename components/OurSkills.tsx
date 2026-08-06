@@ -16,7 +16,9 @@ export default async function OurSkills() {
   const cards: Card[] = data?.cards || []
 
   return (
-    <section className="py-20 bg-black text-white">
+    <section className="text-white bg-gradient-to-b from-[#000000] to-[#000000cf]">
+      <div className='h-[100px] [clip-path:polygon(0_0,100%_0,100%_45%,0_100%)] bg-gray-300 '></div>
+      <div className=" py-20">
       <div className="max-w-[1300px] mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold">{title}</h2>
@@ -48,6 +50,7 @@ export default async function OurSkills() {
             )
           })}
         </div>
+      </div>
       </div>
     </section>
   )

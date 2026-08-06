@@ -80,7 +80,7 @@ export default function OurProjects({ data }: { data?: OurProjectsProps } = {}) 
                     href={project.link.href}
                     target={/^(https?:|mailto:|tel:)/.test(project.link.href) ? '_blank' : undefined}
                     rel={/^(https?:|mailto:|tel:)/.test(project.link.href) ? 'noreferrer noopener' : undefined}
-                    className="inline-flex items-center text-lg font-bold text-white transition absolute bottom-0 left-0 right-0 top-0 m-auto h-[120px] w-[120px] justify-center rounded-full  bg-white opacity-0 transition duration-500 ease-in-out group-hover:opacity-100 group-hover:bg-black "
+                    className="inline-flex items-center text-[16px] font-bold text-white transition absolute bottom-0 left-0 right-0 top-0 m-auto h-[100px] w-[100px] justify-center rounded-full  bg-white opacity-0 transition duration-500 ease-in-out group-hover:opacity-100 group-hover:bg-black "
                   >
                     {project.link.label}
                     <span className="ml-2">↗</span>

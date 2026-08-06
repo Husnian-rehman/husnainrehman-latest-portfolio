@@ -125,7 +125,8 @@ export default function Banner({
               <div className=" relative hidden lg:flex flex-col items-start mt-5">
                   <h2 className="2xl:text-[98px] xl:text-[80px] lg:text-[63px] text-[50px] font-bold tracking-tighter text-transparent"
                       style={{ WebkitTextStroke: '1px #333' }}>
-                    UI UX DESIGNER
+                    {/* UI UX DESIGNER */}
+                    FULL STACK DEV
                   </h2>
                   <h2 className="2xl:text-[98px] xl:text-[80px]  lg:text-[63px] text-[50px] font-bold tracking-tighter text-transparent select-none"
                       style={{ 
@@ -134,7 +135,7 @@ export default function Banner({
                          maskImage: 'linear-gradient(transparent, rgb(18 15 37 / 96%))',
                            marginTop: '-40px',
                       }}>
-                    UI UX DESIGNER
+                    FULL STACK DEV
                   </h2>
                 </div>
             </div>

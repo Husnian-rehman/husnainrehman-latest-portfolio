@@ -8,7 +8,7 @@ export default function EducationSection({
   cards,
 }: EducationSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-[#111111] py-16 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#000000] to-[#000000cf] py-16 text-white">
       <div className="max-w-[1150px] px-5 mx-auto">
         <div className="mb-16 text-center">
           <div className="inline-flex items-center gap-3">
