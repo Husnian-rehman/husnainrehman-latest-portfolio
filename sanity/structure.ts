@@ -99,4 +99,16 @@ export const structure: StructureResolver = (S) =>
               S.documentTypeListItem('siteAllServices').title('All Services'),
             ])
         ),
+
+          // ========== DownloadCV  PAGE SETTINGS ==========
+         S.listItem()
+        .id("download-cv-page-settings")
+        .title("Download CV Page")
+        .child(
+          S.list()
+            .title("Download CV page Settings")
+            .items([
+              S.documentTypeListItem('siteDownloadCvBanner').title('Download CV Banner'),
+            ])
+        ),
     ])

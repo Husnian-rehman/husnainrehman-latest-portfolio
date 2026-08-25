@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useState } from 'react'
 import type { BannerProps } from '../types/type'
 import { urlFor } from '../sanity/lib/image'
 
@@ -35,6 +37,7 @@ const socialIcons: { [key: string]: React.ReactElement } = {
 export default function Banner({
   pretitle = 'Hi there! 👋 I’m',
   title = 'Husnain Rehman',
+  headingLines,
   description = 'I believe that collaboration and creativity are the essence of progress. And I am dedicated to bringing a fresh perspective to every project undertake.',
   primaryCta,
   secondaryCta,
@@ -42,6 +45,38 @@ export default function Banner({
   image,
   secondaryImage,
 }: BannerProps) {
+  const lines = headingLines?.filter(Boolean) ?? []
+  const [lineIndex, setLineIndex] = useState(0)
+  const [visibleLength, setVisibleLength] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    if (!lines.length) return
+
+    const currentLine = lines[lineIndex % lines.length]
+    const isComplete = visibleLength === currentLine.length
+    const delay = isComplete && !isDeleting ? 1800 : isDeleting ? 45 : 85
+
+    const timer = window.setTimeout(() => {
+      if (!isDeleting && !isComplete) {
+        setVisibleLength((length) => length + 1)
+      } else if (!isDeleting && isComplete) {
+        setIsDeleting(true)
+      } else if (isDeleting && visibleLength > 0) {
+        setVisibleLength((length) => length - 1)
+      } else {
+        setIsDeleting(false)
+        setLineIndex((index) => (index + 1) % lines.length)
+      }
+    }, delay)
+
+    return () => window.clearTimeout(timer)
+  }, [isDeleting, lineIndex, lines, visibleLength])
+
+  const animatedTitle = lines.length
+    ? lines[lineIndex % lines.length].slice(0, visibleLength)
+    : title
+
   const safePrimaryCta = primaryCta ?? { label: "Let's Talk", href: '#contact' }
   const safeSecondaryCta = secondaryCta ?? { label: 'Download CV', href: '#download' }
   const safeSocialLinks = socialLinks ?? [
@@ -79,11 +114,12 @@ export default function Banner({
       <div className="max-w-[1400px] mx-auto px-4 relative z-10">
           <div className="">
             <p className="text-sm uppercase tracking-[0.2em] mb-4 text-[var(--primary)] font-[600]">{pretitle}</p>
-            <h1 className="text-5xl sm:text-6xl lg:text-[80px] xl:text-[100px] mb-8 font-bold tracking-[0.1em] text-[var(--primary)]">
-              {title}
+            <h1 className="min-h-[1.1em] text-5xl sm:text-6xl lg:text-[70px] xl:text-[85px] mb-8 font-bold tracking-[0.1em] text-[var(--primary)]">
+              {animatedTitle}
+              {lines.length ? <span className="ml-1 inline-block h-[0.85em] w-[3px] translate-y-[0.08em] animate-pulse bg-[var(--primary)]" aria-hidden="true" /> : null}
             </h1>
             <div className="xl:w-[67%] lg:w-[65%] ml-auto">
-              <p className=" text-base font-[600] lg:max-w-[850px] leading-7 text-[#545b63] sm:text-lg mb-8">
+              <p className=" text-base font-[600] lg:max-w-[850px] leading-7 text-[#000] sm:text-lg lg:text-xl mb-8">
                 {description}
               </p>
               <div className='flex md:gap-4 gap-8 items-center flex-wrap '>

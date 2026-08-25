@@ -48,6 +48,7 @@ export interface BannerSocialLink {
 export interface BannerProps {
   pretitle?: string
   title?: string
+  headingLines?: string[]
   description?: string
   primaryCta?: BannerCta
   secondaryCta?: BannerCta
@@ -178,8 +179,30 @@ export interface ResumeFile {
   asset?: {
     url?: string
     _id?: string
+    originalFilename?: string
   }
   originalFilename?: string
+}
+
+export interface DownloadCvBannerProps {
+  eyebrow?: string
+  headingLines?: string[]
+  description?: string
+  buttonLabel?: string
+  backgroundImage?: {
+    asset?: {
+      url?: string
+      _id?: string
+    }
+    hotspot?: unknown
+  }
+  overlayOpacity?: number
+  cvFile?: {
+    asset?: {
+      url?: string
+      originalFilename?: string
+    }
+  }
 }
 
 export interface AboutUsBannerProps {

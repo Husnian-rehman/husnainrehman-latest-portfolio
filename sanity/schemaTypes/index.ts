@@ -18,7 +18,8 @@ import marquee from './marquee'
 import extraSection from './extraSection'
 import testimonial from './testimonial'
 import video from './video'
+import downloadCvBanner from './downloadCvBanner'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [header, footer, banner, aboutUs, aboutUsBanner, aboutUsEducation, workExperience, ourServices, allServices, ourProjects, allProjects, skillSlider, skillCard, contactUsBanner, contactUsCard, marquee, extraSection, testimonial, video],
+  types: [header, footer, banner, aboutUs, aboutUsBanner, aboutUsEducation, workExperience, ourServices, allServices, ourProjects, allProjects, skillSlider, skillCard, contactUsBanner, contactUsCard, marquee, extraSection, testimonial, video, downloadCvBanner],
 }

@@ -19,6 +19,14 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'headingLines',
+      title: 'Animated Heading Lines',
+      type: 'array',
+      of: [{type: 'string'}],
+      description: 'Add each sentence separately. The banner will type, erase, and repeat them in order.',
+      validation: (Rule) => Rule.min(1),
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text',

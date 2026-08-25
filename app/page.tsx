@@ -41,6 +41,7 @@ export default async function Home() {
       <Banner
         pretitle={bannerData?.pretitle}
         title={bannerData?.title}
+        headingLines={bannerData?.headingLines}
         description={bannerData?.description}
         primaryCta={bannerData?.primaryCta}
         secondaryCta={bannerData?.secondaryCta}
