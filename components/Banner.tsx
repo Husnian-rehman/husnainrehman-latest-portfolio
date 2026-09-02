@@ -114,7 +114,7 @@ export default function Banner({
       <div className="max-w-[1400px] mx-auto px-4 relative z-10">
           <div className="">
             <p className="text-sm uppercase tracking-[0.2em] mb-4 text-[var(--primary)] font-[600]">{pretitle}</p>
-            <h1 className="min-h-[1.1em] text-5xl sm:text-6xl lg:text-[70px] xl:text-[85px] mb-8 font-bold tracking-[0.1em] text-[var(--primary)]">
+            <h1 className="text-5xl sm:text-6xl lg:text-[70px] xl:text-[85px] sm:mb-8 mb-4     font-bold tracking-[0.1em] text-[var(--primary)]">
               {animatedTitle}
               {lines.length ? <span className="ml-1 inline-block h-[0.85em] w-[3px] translate-y-[0.08em] animate-pulse bg-[var(--primary)]" aria-hidden="true" /> : null}
             </h1>

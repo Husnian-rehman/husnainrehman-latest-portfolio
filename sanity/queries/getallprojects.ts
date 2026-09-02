@@ -7,6 +7,8 @@ export const GET_ALL_PROJECTS = `*[_type == "siteAllProjects"][0]{
   },
   projects[] {
     title,
+    "slug": slug.current,
+    description,
     image {
       asset->{_id, url},
       hotspot

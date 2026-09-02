@@ -280,6 +280,8 @@ export interface AllProjectsProjectLink {
 
 export interface AllProjectsProject {
   title?: string
+  slug?: string
+  description?: string
   image?: {
     asset?: {
       url?: string
