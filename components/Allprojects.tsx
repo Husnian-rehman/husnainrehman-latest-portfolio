@@ -31,7 +31,7 @@ export default function Allprojects({ data }: { data?: AllProjectsProps } = {}) 
           {projects.map((project, index) => (
             <article
               key={`${project.title || 'project'}-${index}`}
-              className="relative group overflow-hidden rounded-tl-none rounded-tr-3xl rounded-bl-3xl rounded-br-none border border-black bg-white shadow-[0_20px_50px_rgba(0,0,0,0.06)] transition duration-300 hover:shadow-[0_24px_60px_rgba(0,0,0,0.12)]"
+              className="cursor-pointer relative group overflow-hidden rounded-tl-none rounded-tr-3xl rounded-bl-3xl rounded-br-none border border-black bg-white shadow-[0_20px_50px_rgba(0,0,0,0.06)] transition duration-300 hover:shadow-[0_24px_60px_rgba(0,0,0,0.12)]"
             >
               {project.image ? (
                 <div className="block h-110 relative overflow-hidden group">
@@ -44,15 +44,29 @@ export default function Allprojects({ data }: { data?: AllProjectsProps } = {}) 
                 </div>
               ) : null}
 
-              {project.slug && project.link?.label ? (
-                <Link
-                  href={`/Projects/${project.slug}`}
-                  className="inline-flex items-center text-[16px] font-bold text-white transition absolute bottom-0 left-0 right-0 top-0 m-auto h-[100px] w-[100px] justify-center rounded-full bg-white opacity-0 duration-500 ease-in-out group-hover:opacity-100 group-hover:bg-black"
-                >
-                  {project.link.label}
-                  <span className="ml-2">↗</span>
-                </Link>
-              ) : null}
+              <div className="absolute bottom-0 left-0 right-0 flex translate-y-full items-center justify-center gap-3 bg-transparent p-4 opacity-0 transition-all duration-600 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+                {project.link?.href ? (
+                  <a
+                    href={project.link.href}
+                    target={/^(https?:|mailto:|tel:)/.test(project.link.href) ? '_blank' : undefined}
+                    rel={/^(https?:|mailto:|tel:)/.test(project.link.href) ? 'noreferrer noopener' : undefined}
+                    className="hidden items-center rounded-tl-none rounded-tr-lg rounded-bl-lg rounded-br-none bg-[var(--primary)] px-5 py-2 text-[18px] font-[600] text-white hover:opacity-95 lg:inline-flex"
+                  >
+                    View Demo
+                    <span className="ml-2">↗</span>
+                  </a>
+                ) : null}
+
+                {project.slug ? (
+                  <Link
+                    href={`/Projects/${project.slug}`}
+                    className="inline-flex items-center rounded-tl-none rounded-tr-lg rounded-bl-lg rounded-br-none bg-[var(--primary)] px-5 py-2 text-[18px] font-[600] text-white hover:opacity-95"
+                  >
+                    View Detail
+                     <span className="ml-2">↗</span>
+                  </Link>
+                ) : null}
+              </div>
             </article>
           ))}
         </div>

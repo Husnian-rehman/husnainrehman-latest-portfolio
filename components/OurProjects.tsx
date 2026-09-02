@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import { urlFor } from '../sanity/lib/image'
 import type { OurProjectsProps } from '../types/type'
+import Link from 'next/link'
 
 export default function OurProjects({ data }: { data?: OurProjectsProps } = {}) {
   const tabs = data?.tabs ?? []
@@ -75,17 +76,29 @@ export default function OurProjects({ data }: { data?: OurProjectsProps } = {}) 
 </div>
               ) : null}
 
-              {project.link?.href && project.link?.label ? (
+              <div className="absolute bottom-0 left-0 right-0 flex translate-y-full items-center justify-center gap-3 bg-transparent p-4 opacity-0 transition-all duration-600 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+                {project.link?.href ? (
                   <a
                     href={project.link.href}
                     target={/^(https?:|mailto:|tel:)/.test(project.link.href) ? '_blank' : undefined}
                     rel={/^(https?:|mailto:|tel:)/.test(project.link.href) ? 'noreferrer noopener' : undefined}
-                    className="inline-flex items-center text-[16px] font-bold text-white transition absolute bottom-0 left-0 right-0 top-0 m-auto h-[100px] w-[100px] justify-center rounded-full  bg-white opacity-0 transition duration-500 ease-in-out group-hover:opacity-100 group-hover:bg-black "
+                    className="hidden items-center rounded-tl-none rounded-tr-lg rounded-bl-lg rounded-br-none bg-[var(--primary)] px-5 py-2 text-[18px] font-[600] text-white hover:opacity-95 lg:inline-flex"
                   >
-                    {project.link.label}
+                    View Demo
                     <span className="ml-2">↗</span>
                   </a>
                 ) : null}
+
+                {project.slug ? (
+                  <Link
+                    href={`/Projects/${project.slug}`}
+                    className="inline-flex items-center rounded-tl-none rounded-tr-lg rounded-bl-lg rounded-br-none bg-[var(--primary)] px-5 py-2 text-[18px] font-[600] text-white hover:opacity-95"
+                  >
+                    View Detail
+                    <span className="ml-2">↗</span>
+                  </Link>
+                ) : null}
+              </div>
             </article>
           ))}
         </div>

@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { urlFor } from '../../../sanity/lib/image'
 import { client } from '../../../sanity/lib/client'
 import GET_PROJECT from '../../../sanity/queries/getproject'
+import GET_OUR_PROJECT from '../../../sanity/queries/getourproject'
 import type { AllProjectsProject } from '../../../types/type'
 
 type ProjectPageProps = {
@@ -11,6 +12,7 @@ type ProjectPageProps = {
 export default async function ProjectPage({ params }: ProjectPageProps) {
 	const { slug } = await params
 	const project = await client.fetch<AllProjectsProject | null>(GET_PROJECT, { slug })
+		?? await client.fetch<AllProjectsProject | null>(GET_OUR_PROJECT, { slug })
 
 	if (!project) {
 		notFound()

@@ -87,7 +87,7 @@ export default function ContactForm() {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-[#e5e7eb] rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
+                  className="w-full px-4 py-3 border border-black rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -103,7 +103,7 @@ export default function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-[#e5e7eb] rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
+                  className="w-full px-4 py-3 border border-black rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
                   placeholder="your@email.com"
                 />
               </div>
@@ -119,7 +119,7 @@ export default function ContactForm() {
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-[#e5e7eb] rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
+                  className="w-full px-4 py-3 border border-black rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
                   placeholder="+1 (555) 123-4567"
                 />
               </div>
@@ -135,7 +135,7 @@ export default function ContactForm() {
                   value={formData.city}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-[#e5e7eb] rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
+                  className="w-full px-4 py-3 border border-black rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
                   placeholder="Your city"
                 />
               </div>
@@ -151,7 +151,7 @@ export default function ContactForm() {
                   value={formData.country}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-[#e5e7eb] rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
+                  className="w-full px-4 py-3 border border-black rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
                   placeholder="Your country"
                 />
               </div>
@@ -167,7 +167,7 @@ export default function ContactForm() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-[#e5e7eb] rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
+                  className="w-full px-4 py-3 border border-black rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent"
                   placeholder="Subject"
                 />
               </div>
@@ -184,7 +184,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-3 border border-[#e5e7eb] rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent resize-none"
+                className="w-full px-4 py-3 border border-black rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none focus:outline-none focus:ring-2 focus:ring-[#0f0e0e] focus:border-transparent resize-none"
                 placeholder="Your message"
               />
             </div>
@@ -200,7 +200,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 px-6 bg-[#0f0e0e] text-white rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none font-semibold hover:opacity-90 transition-all ease-in-out duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="cursor-pointer w-full py-3 px-6 bg-[#0f0e0e] text-white rounded-tl-none rounded-tr-xl rounded-bl-xl rounded-br-none font-semibold hover:opacity-90 transition-all ease-in-out duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Sending...' : 'Submit Message'}
             </button>

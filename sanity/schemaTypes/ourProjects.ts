@@ -45,11 +45,24 @@ export default defineType({
                       validation: (Rule) => Rule.required().min(2),
                     },
                     {
+                      name: 'slug',
+                      title: 'Project Slug',
+                      type: 'slug',
+                      options: {source: 'title', maxLength: 96},
+                      validation: (Rule) => Rule.required(),
+                    },
+                    {
                       name: 'image',
                       title: 'Project Image',
                       type: 'image',
                       options: {hotspot: true},
                       validation: (Rule) => Rule.required(),
+                    },
+                    {
+                      name: 'description',
+                      title: 'Project Description',
+                      type: 'text',
+                      rows: 8,
                     },
                     {
                       name: 'link',

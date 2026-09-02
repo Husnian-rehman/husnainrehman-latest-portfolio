@@ -252,6 +252,8 @@ export interface OurProjectsProjectLink {
 
 export interface OurProjectsProject {
   title?: string
+  slug?: string
+  description?: string
   image?: {
     asset?: {
       url?: string
